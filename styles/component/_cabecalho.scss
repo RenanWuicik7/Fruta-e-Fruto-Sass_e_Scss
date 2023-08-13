@@ -1,0 +1,39 @@
+@import '../abstract/base';
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $cabecalho-fundo;
+    padding: 0 2rem;
+    .menu {
+        .menu-lista {
+            display: flex;
+            .menu-lista--item {
+                list-style: none;
+                &:last-child {
+                    .menu-lista--item_link {
+                        margin-right: 0;
+                    }
+                }
+                .menu-lista--item_link {
+                    margin-right: 1.25rem;
+                    text-decoration: none;
+                    color: $link;
+                    &:active {
+                        color: $link-ativo;
+                        font-weight: bold;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                        color: $link-hover;
+                    }
+                }
+                .menu-lista--item_link.ativo {
+                    color: $link-ativo;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
